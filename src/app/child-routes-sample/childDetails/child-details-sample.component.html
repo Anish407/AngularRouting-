@@ -1,0 +1,69 @@
+<div [@voidTrigger]='a' class="card">
+    <div class="card-header">
+   
+    </div>
+  
+    <div class="card-body">
+      <form novalidate
+            #productForm="ngForm">
+  
+        <div class="form-group row">
+          <label class="col-md-2 col-form-label"
+                 for="productNameId">Product Name</label>
+          <div class="col-md-8">
+            <input class="form-control"
+                   id="productNameId"
+                   type="text"
+                   placeholder="Name (required)"
+                   required
+                   minlength="3"
+                   [(ngModel)]="product.productName"
+                   name="productName"/>
+            <span class="invalid-feedback">
+              <span >
+                Product name is required.
+              </span>
+              <span >
+                Product name must be at least three characters.
+              </span>
+            </span>
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <label class="col-md-2 col-form-label"
+                 for="productCodeId">Product Code</label>
+          <div class="col-md-8">
+            <input class="form-control"
+                   id="productCodeId"
+                   type="text"
+                   placeholder="Code (required)"
+                   required
+                 
+                   name="productCode"
+                  />
+            <span class="invalid-feedback">
+              <span >
+                Product code is required.
+              </span>
+            </span>
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <label class="col-md-2 col-form-label"
+                 for="descriptionId">Description</label>
+          <div class="col-md-8">
+            <textarea class="form-control"
+                      id="descriptionId"
+                      placeholder="Description"
+                      rows=3
+                     
+                      name="description"></textarea>
+          </div>
+        </div>
+  
+  
+      </form>
+    </div>
+  </div>
